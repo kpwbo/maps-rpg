@@ -7,7 +7,7 @@
   "author": "Jovan El Hoayek <jhoayek@gmail.com>",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue src",
+    "lint": "eslint --ext .js,.vue src src-electron src-pwa server",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {

@@ -42,7 +42,7 @@
   <body>
     <% if (!htmlWebpackPlugin.options.ctx.mode.electron) { %>
       <noscript>
-        This is your fallback content in case JavaScript fails to load.
+        JavaScript is needed to use this application.
       </noscript>
     <% } %>
 
@@ -54,6 +54,6 @@
 
     <!-- built files will be auto injected here -->
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVBzbvYKGj3AJOzYzfoJoV2keOdwdc6jg"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVBzbvYKGj3AJOzYzfoJoV2keOdwdc6jg"></script>
   </body>
 </html>
