@@ -7,7 +7,7 @@
         <q-item-main :label="place.name" />
       </q-item>
     </q-list>
-    <p v-else class="text-center q-mt-md">Nothing of interest nearby.</p>
+    <p v-else class="text-center q-mt-md">{{ $t('Nothing of interest nearby.') }}</p>
   </div>
 </template>
 
