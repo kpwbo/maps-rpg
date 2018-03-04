@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped>
-.gmap {
-  height: 100vh;
+.q-layout-page, .gmap {
+  height: 100%;
 }
 </style>

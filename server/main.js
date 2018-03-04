@@ -14,10 +14,10 @@ app.use(bodyParser.json());
 app.use('/api/nearbyPlaces', nearbyPlaces);
 
 // Serve static files
-app.use(express.static(path.join(__dirname, '..', 'dist', 'spa-mat')));
+app.use(express.static(path.join(__dirname, '..', 'dist', 'pwa-mat')));
 
 // Otherwise, serve index.html
-app.use('*', express.static(path.join(__dirname, '..', 'dist', 'spa-mat', 'index.html')));
+app.use('*', express.static(path.join(__dirname, '..', 'dist', 'pwa-mat', 'index.html')));
 
 const port = process.env.PORT || '3000';
 

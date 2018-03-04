@@ -27,3 +27,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.q-layout, .q-layout-page-container {
+  height: 100%;
+}
+</style>
