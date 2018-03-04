@@ -41,25 +41,28 @@ module.exports = function (ctx) {
     devServer: {
       // https: true,
       // port: 8080,
-      open: true // opens browser window automatically
+      open: true, // opens browser window automatically
+      proxy: {
+        '/api': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+        }
+      }
     },
     // framework: 'all' --- includes everything; for dev only!
     framework: {
       components: [
         'QLayout',
-        'QLayoutHeader',
-        'QLayoutDrawer',
         'QPageContainer',
+        'QLayoutDrawer',
         'QPage',
-        'QToolbar',
-        'QToolbarTitle',
-        'QBtn',
-        'QIcon',
+        'QTabs',
+        'QRouteTab',
+        'QLayoutHeader',
         'QList',
-        'QListHeader',
         'QItem',
+        'QItemSide',
         'QItemMain',
-        'QItemSide'
       ],
       directives: [
         'Ripple'

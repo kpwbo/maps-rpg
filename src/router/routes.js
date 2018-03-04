@@ -2,14 +2,11 @@
 export default [
   {
     path: '/',
-    component: () => import('layouts/default'),
+    component: () => import('layouts/layout'),
     children: [
-      { path: '', component: () => import('pages/index') },
+      { path: '', redirect: 'nearbyPlaces' },
+      { path: 'nearbyPlaces', component: () => import('pages/nearbyPlaces') },
+      { path: '*', redirect: 'nearbyPlaces' },
     ],
-  },
-
-  { // Always leave this as last one
-    path: '*',
-    component: () => import('pages/404'),
   },
 ];

@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import example from './module-example';
+import places from './places';
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   modules: {
-    example,
+    places,
   },
 });
 

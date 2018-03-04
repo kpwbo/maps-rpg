@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
     "vue-i18n": "^7.3.3"
   },
   "devDependencies": {
