@@ -1,5 +1,7 @@
 // Configuration for your app
 
+const result = require('dotenv').config('.env');
+
 module.exports = function (ctx) {
   return {
     // app plugins (/src/plugins)
@@ -25,6 +27,9 @@ module.exports = function (ctx) {
     build: {
       scopeHoisting: true,
       vueRouterMode: 'history',
+      env: {
+        ELECTRON_API_URL: `'${result.parsed.ELECTRON_API_URL}'`,
+      },
       // gzip: true,
       // analyze: true,
       // extractCSS: false,
@@ -115,7 +120,7 @@ module.exports = function (ctx) {
       }
     },
     cordova: {
-      // id: 'org.cordova.quasar.app'
+      id: 'com.kpwbo.maps-rpg'
     },
     electron: {
       extendWebpack (cfg) {

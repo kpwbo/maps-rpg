@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Maps RPG",
   "productName": "Maps RPG",
-  "cordovaId": "com.kpwbo",
+  "cordovaId": "com.kpwbo.maps-rpg",
   "author": "Jovan El Hoayek <jhoayek@gmail.com>",
   "private": true,
   "scripts": {
@@ -20,6 +20,11 @@
   },
   "devDependencies": {
     "babel-eslint": "8.2.1",
+    "devtron": "1.4.0",
+    "electron": "1.7.9",
+    "electron-debug": "1.4.0",
+    "electron-devtools-installer": "2.2.1",
+    "electron-packager": "9.1.0",
     "eslint": "4.15.0",
     "eslint-config-airbnb-base": "11.3.0",
     "eslint-friendly-formatter": "3.0.0",
