@@ -2,7 +2,7 @@
   <q-layout view="hHh LpR fFf">
     <q-layout-header>
       <q-tabs>
-        <q-route-tab slot="title" to="nearbyPlaces"
+        <q-route-tab slot="title" to="/"
           label="Nearby Places" :count="countNearbyPlaces" />
       </q-tabs>
     </q-layout-header>
