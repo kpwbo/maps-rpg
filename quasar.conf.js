@@ -87,7 +87,6 @@ module.exports = ctx => (
         short_name: 'Maps RPG',
         description: 'Maps RPG',
         display: 'standalone',
-        orientation: 'portrait',
         background_color: '#ffffff',
         theme_color: '#027be3',
         icons: [
