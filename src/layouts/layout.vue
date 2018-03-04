@@ -2,15 +2,14 @@
   <q-layout view="hHh LpR fFf">
     <q-layout-header>
       <q-tabs>
-        <q-route-tab slot="title" to="/"
-          :label="$t('Nearby Places')" :count="countNearbyPlaces" />
+        <q-route-tab slot="title" to="/" :label="$t('Nearby Places')" :count="countNearbyPlaces" />
       </q-tabs>
     </q-layout-header>
     <q-layout-drawer :value="true" side="right">
       <router-view />
     </q-layout-drawer>
     <q-page-container>
-      <google-maps></google-maps>
+      <google-maps />
     </q-page-container>
   </q-layout>
 </template>

@@ -1,8 +1,7 @@
 <template>
   <div>
     <q-list v-if="nearbyPlaces.length > 0" highlight no-border>
-      <q-item v-for="place in nearbyPlaces" :key="place.name"
-        @click.native="checkPlace(place)" >
+      <q-item v-for="place in nearbyPlaces" :key="place.name" @click.native="checkPlace(place)">
         <q-item-side :icon="getIcon(place.type)" />
         <q-item-main :label="place.name" />
       </q-item>

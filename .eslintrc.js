@@ -2,17 +2,17 @@ module.exports = {
   root: true,
   parserOptions: {
     parser: 'babel-eslint',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   env: {
-    browser: true
+    browser: true,
   },
   // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
   // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-  extends: ['plugin:vue/essential', 'airbnb-base'],
+  extends: ['plugin:vue/recommended', 'airbnb-base'],
   // required to lint *.vue files
   plugins: [
-    'vue'
+    'vue',
   ],
   globals: {
     'ga': true, // Google Analytics
@@ -34,6 +34,19 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
 
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
-  }
-}
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+
+    'vue/html-self-closing': ['error', {
+      html: {
+        normal: 'never',
+      },
+    }],
+    'vue/max-attributes-per-line': ['error', {
+      singleline: 5,
+      multiline: {
+        max: 5,
+        allowFirstLine: true,
+      },
+    }],
+  },
+};
