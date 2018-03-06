@@ -46,7 +46,7 @@ router.use('/', (req, res) => {
           result.geometry.location.lat,
           result.geometry.location.lng,
           type,
-          result.place_id
+          result.place_id,
         ));
       });
     }).catch((error) => {
