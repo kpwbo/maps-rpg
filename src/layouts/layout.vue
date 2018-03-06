@@ -2,7 +2,7 @@
   <q-layout view="hHh LpR fFf">
     <q-layout-header>
       <q-tabs>
-        <q-route-tab slot="title" to="/" :label="$t('Nearby Places')" :count="countNearbyPlaces" />
+        <q-route-tab slot="title" to="/" :label="$t('Nearby_Places')" :count="countNearbyPlaces" />
       </q-tabs>
     </q-layout-header>
     <q-layout-drawer :value="true" side="right">

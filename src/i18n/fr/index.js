@@ -1,4 +1,7 @@
+import bank from './bank.js';
+
 export default {
-  'Nearby Places': 'À proximité',
-  'Nothing of interest nearby.': 'Rien d\'intéressant à proximité.',
+  bank,
+  Nearby_Places: 'À proximité',
+  Nothing_of_interest_nearby: 'Rien d\'intéressant à proximité.',
 };

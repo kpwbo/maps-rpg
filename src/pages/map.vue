@@ -14,8 +14,8 @@ export default {
     };
     const map = new google.maps.StreetViewPanorama(this.$refs.gmap, mapOptions);
     map.addListener('position_changed', () => {
-      const pos = map.getPosition();
-      this.$store.dispatch('places/findNearbyPlaces', pos);
+      this.$store.commit('places/setCurrentPosition', map.getPosition());
+      this.$store.dispatch('places/findNearbyPlaces');
     });
   },
 };

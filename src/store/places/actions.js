@@ -1,13 +1,15 @@
 import axios from 'axios';
 
-export const findNearbyPlaces = ({ commit }, position) => {
+export const findNearbyPlaces = ({ commit, state }) => {
+  commit('setLookingForNearbyPlaces', true);
   axios.get('/api/nearbyPlaces', {
     params: {
-      lat: position.lat().toString(),
-      lng: position.lng().toString(),
+      lat: state.currentPosition.lat().toString(),
+      lng: state.currentPosition.lng().toString(),
     },
   }).then((response) => {
     commit('setNearbyPlaces', response.data);
+    commit('setLookingForNearbyPlaces', false);
   });
 };
 

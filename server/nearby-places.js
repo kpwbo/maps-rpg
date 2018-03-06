@@ -4,11 +4,12 @@ const axios = require('axios');
 const router = express.Router();
 
 class PlaceOfInterest {
-  constructor(name, lat, lng, type) {
+  constructor(name, lat, lng, type, id) {
     this.name = name;
     this.lat = lat;
     this.lng = lng;
     this.type = type;
+    this.id = id;
   }
 }
 
@@ -45,6 +46,7 @@ router.use('/', (req, res) => {
           result.geometry.location.lat,
           result.geometry.location.lng,
           type,
+          result.place_id
         ));
       });
     }).catch((error) => {

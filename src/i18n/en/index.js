@@ -1,4 +1,7 @@
+import bank from './bank';
+
 export default {
-  'Nearby Places': 'Nearby Places',
-  'Nothing of interest nearby.': 'Nothing of interest nearby.',
+  bank,
+  Nearby_Places: 'Nearby Places',
+  Nothing_of_interest_nearby: 'Nothing of interest nearby.',
 };

@@ -6,7 +6,8 @@
         <q-item-main :label="place.name" />
       </q-item>
     </q-list>
-    <p v-else class="text-center q-mt-md">{{ $t('Nothing of interest nearby.') }}</p>
+    <p v-else class="text-center q-mt-md">{{ $t('Nothing_of_interest_nearby') }}</p>
+    <q-inner-loading :visible="isLookingForNearbyPlaces" dark />
   </div>
 </template>
 
@@ -16,11 +17,13 @@ export default {
     nearbyPlaces() {
       return this.$store.getters['places/getNearbyPlaces'];
     },
+    isLookingForNearbyPlaces() {
+      return this.$store.getters['places/isLookingForNearbyPlaces'];
+    },
   },
   methods: {
     checkPlace(place) {
-      // TODO : open modal
-      console.log(place);
+      this.$router.push({ name: place.type, params: { place } });
     },
 
     getIcon(type) {

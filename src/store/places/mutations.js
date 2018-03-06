@@ -2,4 +2,10 @@ export const setNearbyPlaces = (state, nearbyPlaces) => {
   state.nearbyPlaces = nearbyPlaces;
 };
 
-export const something = () => {};
+export const setCurrentPosition = (state, currentPosition) => {
+  state.currentPosition = currentPosition;
+};
+
+export const setLookingForNearbyPlaces = (state, looking) => {
+  state.lookingForNearbyPlaces = looking;
+};
